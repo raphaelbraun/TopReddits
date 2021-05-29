@@ -16,6 +16,9 @@ class AppCoordinator: Coordinator {
   }
 
   func start() {
-    
+    let viewModel = TopRedditsViewModel()
+    let viewController = TopRedditsViewController(viewModel: viewModel)
+
+    navigationController.pushViewController(viewController, animated: false)
   }
 }
