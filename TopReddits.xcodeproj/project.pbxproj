@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		AB306C492662562E0030428A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB306C482662562E0030428A /* AppDelegate.swift */; };
 		AB306C4B2662562E0030428A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB306C4A2662562E0030428A /* SceneDelegate.swift */; };
-		AB306C4D2662562E0030428A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB306C4C2662562E0030428A /* ViewController.swift */; };
-		AB306C502662562E0030428A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB306C4E2662562E0030428A /* Main.storyboard */; };
+		AB306C4D2662562E0030428A /* TopRedditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB306C4C2662562E0030428A /* TopRedditsViewController.swift */; };
 		AB306C522662562F0030428A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB306C512662562F0030428A /* Assets.xcassets */; };
 		AB306C552662562F0030428A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB306C532662562F0030428A /* LaunchScreen.storyboard */; };
 		AB306C60266256300030428A /* TopRedditsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB306C5F266256300030428A /* TopRedditsTests.swift */; };
@@ -38,8 +37,7 @@
 		AB306C452662562E0030428A /* TopReddits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopReddits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB306C482662562E0030428A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB306C4A2662562E0030428A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AB306C4C2662562E0030428A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AB306C4F2662562E0030428A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AB306C4C2662562E0030428A /* TopRedditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRedditsViewController.swift; sourceTree = "<group>"; };
 		AB306C512662562F0030428A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB306C542662562F0030428A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB306C562662562F0030428A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,8 +99,7 @@
 			children = (
 				AB306C482662562E0030428A /* AppDelegate.swift */,
 				AB306C4A2662562E0030428A /* SceneDelegate.swift */,
-				AB306C4C2662562E0030428A /* ViewController.swift */,
-				AB306C4E2662562E0030428A /* Main.storyboard */,
+				AB306C4C2662562E0030428A /* TopRedditsViewController.swift */,
 				AB306C512662562F0030428A /* Assets.xcassets */,
 				AB306C532662562F0030428A /* LaunchScreen.storyboard */,
 				AB306C562662562F0030428A /* Info.plist */,
@@ -233,7 +230,6 @@
 			files = (
 				AB306C552662562F0030428A /* LaunchScreen.storyboard in Resources */,
 				AB306C522662562F0030428A /* Assets.xcassets in Resources */,
-				AB306C502662562E0030428A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB306C4D2662562E0030428A /* ViewController.swift in Sources */,
+				AB306C4D2662562E0030428A /* TopRedditsViewController.swift in Sources */,
 				AB306C492662562E0030428A /* AppDelegate.swift in Sources */,
 				AB306C4B2662562E0030428A /* SceneDelegate.swift in Sources */,
 			);
@@ -296,14 +292,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AB306C4E2662562E0030428A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AB306C4F2662562E0030428A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AB306C532662562F0030428A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
