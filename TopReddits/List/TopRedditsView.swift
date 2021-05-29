@@ -12,7 +12,7 @@ final class TopRedditsView: BaseView {
     let tableView = UITableView()
     tableView.backgroundColor = .systemFill
     tableView.separatorStyle = .none
-
+    tableView.register(TopRedditsTableViewCell.self, forCellReuseIdentifier: TopRedditsTableViewCell.identifier)
     tableView.estimatedRowHeight = 200
     tableView.rowHeight = UITableView.automaticDimension
     tableView.translatesAutoresizingMaskIntoConstraints = false
