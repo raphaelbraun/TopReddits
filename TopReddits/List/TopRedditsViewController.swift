@@ -41,6 +41,8 @@ final class TopRedditsViewController: UIViewController {
   private func setupBinds() {
     title = viewModel.navigationTitle
     baseView.tableView.dataSource = viewModel.tableDataSource
+    baseView.tableView.delegate = self
+
 
     viewModel.reloadData = { [weak self] in
       DispatchQueue.main.async {
@@ -56,5 +58,16 @@ private extension TopRedditsViewController {
     navigationController?.navigationBar.isTranslucent = false
     let redditLogo = UIBarButtonItem(image: UIImage(named: "reddit_logo"), style: .plain, target: nil, action: nil)
     navigationItem.leftBarButtonItem = redditLogo
+  }
+}
+
+extension TopRedditsViewController: UIScrollViewDelegate, UITableViewDelegate {
+  func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    let offsetY = scrollView.contentOffset.y
+    let contentHeight = scrollView.contentSize.height
+    if offsetY > contentHeight - scrollView.frame.height, !viewModel.isLoading {
+      baseView.footerViewActivityIndicatorView.startAnimating()
+      viewModel.loadMore()
+    }
   }
 }

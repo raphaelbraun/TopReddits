@@ -18,11 +18,17 @@ final class TopRedditsView: BaseView {
     tableView.translatesAutoresizingMaskIntoConstraints = false
     return tableView
   }()
+  let footerViewActivityIndicatorView: UIActivityIndicatorView = {
+    let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+    activityIndicator.hidesWhenStopped = true
+    return activityIndicator
+  }()
 
   //MARK: - Initialize
 
   override func initialize() {
     backgroundColor = .white
+    tableView.tableFooterView = footerViewActivityIndicatorView
 
     addSubview(tableView)
   }
