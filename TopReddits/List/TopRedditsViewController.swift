@@ -40,6 +40,14 @@ final class TopRedditsViewController: UIViewController {
 
   private func setupBinds() {
     title = viewModel.navigationTitle
+    baseView.tableView.dataSource = viewModel.tableDataSource
+
+    viewModel.reloadData = { [weak self] in
+      DispatchQueue.main.async {
+        guard let self = self else { return }
+        self.baseView.tableView.reloadData()
+      }
+    }
   }
 }
 

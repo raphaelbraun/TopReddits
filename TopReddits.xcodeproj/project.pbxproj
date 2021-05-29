@@ -26,6 +26,8 @@
 		AB58F9FB2662A3B4003F2D1C /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58F9FA2662A3B4003F2D1C /* Endpoint.swift */; };
 		AB58FA002662A3C6003F2D1C /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58F9FF2662A3C6003F2D1C /* HTTPStatusCode.swift */; };
 		AB58FA052662A3DF003F2D1C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58FA042662A3DF003F2D1C /* Service.swift */; };
+		AB58FA272662CEB6003F2D1C /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58FA262662CEB6003F2D1C /* TableViewDataSource.swift */; };
+		AB58FA2C2662CFAE003F2D1C /* TopRedditsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58FA2B2662CFAE003F2D1C /* TopRedditsCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		AB58F9FA2662A3B4003F2D1C /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		AB58F9FF2662A3C6003F2D1C /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
 		AB58FA042662A3DF003F2D1C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		AB58FA262662CEB6003F2D1C /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		AB58FA2B2662CFAE003F2D1C /* TopRedditsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRedditsCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +175,7 @@
 				AB58F9D5266279C9003F2D1C /* Protocols */,
 				AB42AFA92662689A00914191 /* BaseView.swift */,
 				AB42AFC0266269A800914191 /* ThumbnailLoaderImageView.swift */,
+				AB58FA262662CEB6003F2D1C /* TableViewDataSource.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				AB42AFB82662697D00914191 /* TopRedditsTableViewCell.swift */,
+				AB58FA2B2662CFAE003F2D1C /* TopRedditsCellViewModel.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -332,6 +338,8 @@
 			files = (
 				AB306C4D2662562E0030428A /* TopRedditsViewController.swift in Sources */,
 				AB58F9F52662A390003F2D1C /* TopRedditsWorker.swift in Sources */,
+				AB58FA272662CEB6003F2D1C /* TableViewDataSource.swift in Sources */,
+				AB58FA2C2662CFAE003F2D1C /* TopRedditsCellViewModel.swift in Sources */,
 				AB58FA052662A3DF003F2D1C /* Service.swift in Sources */,
 				AB42AFA42662686900914191 /* TopRedditsView.swift in Sources */,
 				AB58F9FB2662A3B4003F2D1C /* Endpoint.swift in Sources */,
