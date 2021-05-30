@@ -14,7 +14,7 @@ protocol TopRedditsWorkerProtocol: AnyObject {
 class TopRedditsWorker {
   private var service: NetworkRequestable
 
-  init(service: NetworkRequestable = NetworkService(host: URL(string: "https://www.reddit.com/")!)) {
+  init(service: NetworkRequestable = NetworkService(host: Constants.Networking.baseURL)) {
     self.service = service
   }
 }
@@ -22,8 +22,8 @@ class TopRedditsWorker {
 //MARK: - TopRedditsWorkerProtocol
 
 extension TopRedditsWorker: TopRedditsWorkerProtocol {
-  public func fetchReddits(after: String? = nil, completion: @escaping (Result<TopReddits, Error>) -> Void) {
-    var endpoint = Endpoint(path: "top.json")
+  public func fetchReddits(after: String?, completion: @escaping (Result<TopReddits, Error>) -> Void) {
+    var endpoint = Endpoint(path: Constants.Networking.TopReddits.top)
     if let after = after {
       endpoint.queryItems = [URLQueryItem(name: "after", value: after)]
     }

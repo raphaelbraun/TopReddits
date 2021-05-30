@@ -42,14 +42,34 @@ final class TopRedditsViewController: UIViewController {
     title = viewModel.navigationTitle
     baseView.tableView.dataSource = viewModel.tableDataSource
     baseView.tableView.delegate = self
-
+    baseView.refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
 
     viewModel.reloadData = { [weak self] in
       DispatchQueue.main.async {
         guard let self = self else { return }
         self.baseView.tableView.reloadData()
+        self.baseView.footerViewActivityIndicatorView.stopAnimating()
+        if self.baseView.refreshControl.isRefreshing {
+          self.baseView.refreshControl.endRefreshing()
+        }
       }
     }
+
+    viewModel.error = { [weak self] error in
+      DispatchQueue.main.async {
+        guard let self = self else { return }
+        self.baseView.tableViewActivityIndicatorView.stopAnimating()
+        self.baseView.errorLabel.text = error.localizedDescription
+        if self.baseView.refreshControl.isRefreshing {
+          self.baseView.refreshControl.endRefreshing()
+        }
+        self.baseView.tableView.reloadData()
+      }
+    }
+  }
+
+  @objc func refreshData() {
+    viewModel.getReddits()
   }
 }
 

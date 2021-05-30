@@ -8,31 +8,34 @@
 import UIKit
 
 protocol TopRedditsNavigationDelegate: AnyObject {
-
 }
 
 protocol TopRedditsViewModelProtocol: AnyObject {
   var tableDataSource: TableViewDataSource<TopRedditsCellViewModel> { get }
   var navigationTitle: String { get }
   var reloadData: (() -> Void)? { get set }
+  var error: ((Error) -> Void)? { get set }
+  var shouldLoadMore: Bool { get set }
   var isLoading: Bool { get }
 
-  func getReddits()
   func loadMore()
+  func getReddits()
 }
 
-final class TopRedditsViewModel {
-  private weak var navigationDelegate: TopRedditsNavigationDelegate?
+class TopRedditsViewModel {
   private var service: TopRedditsWorkerProtocol
-  var tableDataSource: TableViewDataSource<TopRedditsCellViewModel> = .make(for: [])
-  var after = ""
   var reloadData: (() -> Void)?
+  var error: ((Error) -> Void)?
+  var after = ""
+  var shouldLoadMore: Bool = true
   var isLoading = false
 
+  private weak var navigationDelegate: TopRedditsNavigationDelegate?
+  var tableDataSource: TableViewDataSource<TopRedditsCellViewModel> = .make(for: [])
   let navigationTitle: String
 
   init(service: TopRedditsWorkerProtocol = TopRedditsWorker(),
-    navigationDelegate: TopRedditsNavigationDelegate? = nil) {
+       navigationDelegate: TopRedditsNavigationDelegate? = nil) {
     self.service = service
     self.navigationDelegate = navigationDelegate
     self.navigationTitle = "Top"
@@ -50,8 +53,9 @@ extension TopRedditsViewModel: TopRedditsViewModelProtocol {
       switch result {
         case .success(let topReddits):
           self.tableDataSource.models = topReddits.data.children.map { TopRedditsCellViewModel(model: $0.data) }
+          self.after = topReddits.data.after
         case .failure(let error):
-          print("error")
+          self.error?(error)
       }
       self.isLoading = false
       self.reloadData?()
@@ -66,7 +70,7 @@ extension TopRedditsViewModel: TopRedditsViewModelProtocol {
           self.tableDataSource.models.append(contentsOf: topReddits.data.children.map { TopRedditsCellViewModel(model: $0.data) })
           self.after = topReddits.data.after
         case .failure(let error):
-          print("error")
+          self.error?(error)
       }
       self.isLoading = false
       self.reloadData?()

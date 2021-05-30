@@ -14,10 +14,22 @@ struct TopRedditsCellViewModel {
     cell.titleLabel.text = model.title
     cell.subredditLabel.text = model.subredditNamePrefixed
     cell.authorLabel.text = "u/\(model.author)"
-    cell.createdAtLabel.text = model.createdUtc.description
-    cell.numCommnetsLabel.text = model.numComments.description
-    cell.upsLabel.text = model.ups.description
-    cell.setupConstraints(thumbnailHeight: CGFloat(model.thumbnailHeight!))
-    cell.thumbnailImageView.loadThumbnail(from: model.thumbnail)
+    cell.createdAtLabel.text = formatDate(model.createdUtc)
+    cell.numCommnetsLabel.text = model.numComments.roundedWithAbbreviations
+    cell.upsLabel.text = model.ups.roundedWithAbbreviations
+    cell.setupConstraints(thumbnailHeight: model.thumbnailHeight)
+    if model.thumbnail == Constants.DefaultThumbnails.nsfw {
+      cell.thumbnailImageView.image = UIImage(systemName: "eye.slash")
+    } else if model.thumbnail == Constants.DefaultThumbnails.default {
+      cell.thumbnailImageView.image = UIImage(systemName: "link")
+    } else {
+      cell.thumbnailImageView.loadThumbnail(from: model.thumbnail)
+    }
+  }
+
+  func formatDate(_ createdUtc: Date) -> String {
+    let dateFormatter = RelativeDateTimeFormatter()
+    dateFormatter.dateTimeStyle = .named
+    return dateFormatter.localizedString(for: createdUtc, relativeTo: Date())
   }
 }
