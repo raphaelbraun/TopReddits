@@ -8,6 +8,7 @@
 import UIKit
 
 protocol TopRedditsNavigationDelegate: AnyObject {
+  func openReddit(_ reddit: ChildData)
 }
 
 protocol TopRedditsViewModelProtocol: AnyObject {
@@ -20,6 +21,7 @@ protocol TopRedditsViewModelProtocol: AnyObject {
 
   func loadMore()
   func getReddits()
+  func didTapReddit(at indexPath: IndexPath)
 }
 
 class TopRedditsViewModel {
@@ -43,7 +45,7 @@ class TopRedditsViewModel {
   }
 }
 
-//MARK: - TopRedditsSegurosViewModelProtocol
+//MARK: - TopRedditsViewModelProtocol
 
 extension TopRedditsViewModel: TopRedditsViewModelProtocol {
   func getReddits() {
@@ -73,6 +75,14 @@ extension TopRedditsViewModel: TopRedditsViewModelProtocol {
       }
       self.isLoading = false
       self.reloadData?()
+    }
+  }
+
+  func didTapReddit(at indexPath: IndexPath) {
+    if let reddit = tableDataSource.getModel(at: indexPath) {
+      if let hint = reddit.model.postHint, hint == .image {
+        navigationDelegate?.openReddit(reddit.model)
+      }
     }
   }
 }

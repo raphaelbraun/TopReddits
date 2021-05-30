@@ -11,19 +11,16 @@ struct TopRedditsCellViewModel {
   let model: ChildData
 
   func configure(cell: TopRedditsTableViewCell) {
+    let height = model.postHint == .some(.image) ? model.thumbnailHeight : 0
     cell.titleLabel.text = model.title
     cell.subredditLabel.text = model.subredditNamePrefixed
     cell.authorLabel.text = "u/\(model.author)"
-    cell.createdAtLabel.text = formatDate(model.createdUtc)
-    cell.numCommnetsLabel.text = model.numComments.roundedWithAbbreviations
-    cell.upsLabel.text = model.ups.roundedWithAbbreviations
-    cell.setupConstraints(thumbnailHeight: model.thumbnailHeight)
+    cell.setupConstraints(thumbnailHeight: height)
+    cell.postDataStackView.configView(model)
+    guard model.postHint == .some(.image) else {
+      cell.thumbnailImageView.image = nil
+      return
+    }
     cell.thumbnailImageView.loadThumbnail(from: model.thumbnail)
-  }
-
-  func formatDate(_ createdUtc: Date) -> String {
-    let dateFormatter = RelativeDateTimeFormatter()
-    dateFormatter.dateTimeStyle = .named
-    return dateFormatter.localizedString(for: createdUtc, relativeTo: Date())
   }
 }

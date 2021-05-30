@@ -90,4 +90,8 @@ extension TopRedditsViewController: UIScrollViewDelegate, UITableViewDelegate {
       viewModel.loadMore()
     }
   }
+
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    viewModel.didTapReddit(at: indexPath)
+  }
 }

@@ -32,43 +32,10 @@ final class TopRedditsTableViewCell: UITableViewCell {
     authorLabel.setContentHuggingPriority(.required, for: .vertical)
     return authorLabel
   }()
-  let thumbnailImageView: ThumbnailLoaderImageView = {
-    let thumbnailImageView = ThumbnailLoaderImageView()
+  let thumbnailImageView: LoaderImageView = {
+    let thumbnailImageView = LoaderImageView()
     thumbnailImageView.contentMode = .scaleAspectFit
     return thumbnailImageView
-  }()
-  let upsImageView: UIImageView = {
-    let upsImageView = UIImageView(image: UIImage(systemName: "arrow.up.circle"))
-    upsImageView.tintColor = .lightGray
-    return upsImageView
-  }()
-  let upsLabel: UILabel = {
-    let upsLabel = UILabel()
-    upsLabel.font = .preferredFont(forTextStyle: .footnote)
-    upsLabel.textColor = .lightGray
-    return upsLabel
-  }()
-  let numCommnetsImageView: UIImageView = {
-    let numCommnetsImageView = UIImageView(image: UIImage(systemName: "bubble.right"))
-    numCommnetsImageView.tintColor = .lightGray
-    return numCommnetsImageView
-  }()
-  let numCommnetsLabel: UILabel = {
-    let numCommentsLabel = UILabel()
-    numCommentsLabel.font = .preferredFont(forTextStyle: .footnote)
-    numCommentsLabel.textColor = .lightGray
-    return numCommentsLabel
-  }()
-  let createdAtImageView: UIImageView = {
-    let createdAtImageView = UIImageView(image: UIImage(systemName: "clock"))
-    createdAtImageView.tintColor = .lightGray
-    return createdAtImageView
-  }()
-  let createdAtLabel: UILabel = {
-    let createdAtLabel = UILabel()
-    createdAtLabel.font = .preferredFont(forTextStyle: .footnote)
-    createdAtLabel.textColor = .lightGray
-    return createdAtLabel
   }()
   let spacerView: UIView = {
     let view = UIView()
@@ -76,32 +43,12 @@ final class TopRedditsTableViewCell: UITableViewCell {
     view.translatesAutoresizingMaskIntoConstraints = false
     return view
   }()
-  private lazy var upVotesStackView: UIStackView = {
-    let stackView = UIStackView(arrangedSubviews: [upsImageView, upsLabel])
-    stackView.spacing = 2
-    return stackView
-  }()
-  private lazy var numCommentsStackView: UIStackView = {
-    let stackView = UIStackView(arrangedSubviews: [numCommnetsImageView, numCommnetsLabel])
-    stackView.spacing = 2
-    return stackView
-  }()
-  private lazy var createdAtStackView: UIStackView = {
-    let stackView = UIStackView(arrangedSubviews: [createdAtImageView, createdAtLabel])
-    stackView.spacing = 2
-    return stackView
-  }()
-  private lazy var postDataStackView: UIStackView = {
-    let stackView = UIStackView(arrangedSubviews: [upVotesStackView, numCommentsStackView, createdAtStackView, UIView()])
-    stackView.spacing = 6
-    stackView.alignment = .leading
-    return stackView
-  }()
+  var postDataStackView = PostDataStackView()
   private lazy var subredditAndAuthorNameStackView: UIStackView = {
     let stackView = UIStackView(arrangedSubviews: [subredditLabel, UIView(), authorLabel])
     return stackView
   }()
-  private lazy var mainStackView: UIStackView = {
+  lazy var mainStackView: UIStackView = {
     let stackView = UIStackView(arrangedSubviews: [titleLabel, subredditAndAuthorNameStackView, thumbnailImageView, postDataStackView])
     stackView.axis = .vertical
     stackView.spacing = 12

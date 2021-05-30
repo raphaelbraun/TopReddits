@@ -34,18 +34,18 @@ final class TopRedditsCellViewModelModelTests: XCTestCase {
   }
 
   func testUpsFormatting() {
-    XCTAssertEqual(sut.upsLabel.text, "129.5K")
+    XCTAssertEqual(sut.postDataStackView.upsLabel.text, "129.5K")
   }
 
   func testNumCommentsFormatting() {
-    XCTAssertEqual(sut.numCommnetsLabel.text, "2.3K")
+    XCTAssertEqual(sut.postDataStackView.numCommnetsLabel.text, "2.3K")
   }
 
   func testCreatedAtUtcFormatting() {
     let relativeDateFormatter = RelativeDateTimeFormatter()
     relativeDateFormatter.dateTimeStyle = .named
     let expectedDate = relativeDateFormatter.localizedString(for: topReddit.createdUtc, relativeTo: may29)
-    sut.createdAtLabel.text = expectedDate
-    XCTAssertEqual(sut.createdAtLabel.text, "12 hours ago")
+    sut.postDataStackView.createdAtLabel.text = expectedDate
+    XCTAssertEqual(sut.postDataStackView.createdAtLabel.text, "12 hours ago")
   }
 }
