@@ -11,63 +11,63 @@ final class TopRedditsTableViewCell: UITableViewCell {
   static let identifier = "TopRedditsTableViewCell"
   let titleLabel: UILabel = {
     let titleLabel = UILabel()
-    titleLabel.numberOfLines = 2
+    titleLabel.numberOfLines = 3
     titleLabel.font = .preferredFont(forTextStyle: .headline)
-    titleLabel.setContentCompressionResistancePriority(.required, for: .vertical)
+    titleLabel.setContentHuggingPriority(.defaultHigh, for: .vertical)
     return titleLabel
   }()
   let subredditLabel: UILabel = {
-    let titleLabel = UILabel()
-    titleLabel.font = .preferredFont(forTextStyle: .caption1)
-    titleLabel.setContentCompressionResistancePriority(.required, for: .vertical)
-    titleLabel.text = "Post Title can be loooooong or short it muts break lines but 2 at max pls no longer than that"
-    return titleLabel
+    let subredditLabel = UILabel()
+    subredditLabel.font = .preferredFont(forTextStyle: .caption1)
+    subredditLabel.textColor = UIColor.init(named: "AccentColor")
+    subredditLabel.setContentHuggingPriority(.required, for: .vertical)
+    return subredditLabel
+  }()
+  let authorLabel: UILabel = {
+    let authorLabel = UILabel()
+    authorLabel.font = .preferredFont(forTextStyle: .caption2)
+    authorLabel.textColor = .gray
+    authorLabel.adjustsFontSizeToFitWidth = true
+    authorLabel.minimumScaleFactor = 0.6
+    authorLabel.setContentHuggingPriority(.required, for: .vertical)
+    return authorLabel
   }()
   let thumbnailImageView: ThumbnailLoaderImageView = {
     let thumbnailImageView = ThumbnailLoaderImageView()
     thumbnailImageView.contentMode = .scaleAspectFit
-    thumbnailImageView.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
-    thumbnailImageView.translatesAutoresizingMaskIntoConstraints = false
     return thumbnailImageView
-  }()
-  let authorLabel: UILabel = {
-    let authorLabel = UILabel()
-    authorLabel.textColor = .black
-    authorLabel.font = .preferredFont(forTextStyle: .subheadline)
-    authorLabel.text = "Author name"
-    return authorLabel
   }()
   let upsImageView: UIImageView = {
     let upsImageView = UIImageView(image: UIImage(systemName: "arrow.up.circle"))
+    upsImageView.tintColor = .lightGray
     return upsImageView
   }()
   let upsLabel: UILabel = {
     let upsLabel = UILabel()
-    upsLabel.textColor = .black
     upsLabel.font = .preferredFont(forTextStyle: .footnote)
-    upsLabel.text = "11.456"
+    upsLabel.textColor = .lightGray
     return upsLabel
   }()
   let numCommnetsImageView: UIImageView = {
-    let upsImageView = UIImageView(image: UIImage(systemName: "text.bubble"))
-    return upsImageView
+    let numCommnetsImageView = UIImageView(image: UIImage(systemName: "bubble.right"))
+    numCommnetsImageView.tintColor = .lightGray
+    return numCommnetsImageView
   }()
   let numCommnetsLabel: UILabel = {
     let numCommentsLabel = UILabel()
-    numCommentsLabel.textColor = .black
     numCommentsLabel.font = .preferredFont(forTextStyle: .footnote)
-    numCommentsLabel.text = "124"
+    numCommentsLabel.textColor = .lightGray
     return numCommentsLabel
   }()
   let createdAtImageView: UIImageView = {
     let createdAtImageView = UIImageView(image: UIImage(systemName: "clock"))
+    createdAtImageView.tintColor = .lightGray
     return createdAtImageView
   }()
   let createdAtLabel: UILabel = {
     let createdAtLabel = UILabel()
-    createdAtLabel.textColor = .black
     createdAtLabel.font = .preferredFont(forTextStyle: .footnote)
-    createdAtLabel.text = "2h"
+    createdAtLabel.textColor = .lightGray
     return createdAtLabel
   }()
   let spacerView: UIView = {
@@ -92,25 +92,24 @@ final class TopRedditsTableViewCell: UITableViewCell {
     return stackView
   }()
   private lazy var postDataStackView: UIStackView = {
-    let stackView = UIStackView(arrangedSubviews: [upVotesStackView, numCommentsStackView, createdAtStackView])
+    let stackView = UIStackView(arrangedSubviews: [upVotesStackView, numCommentsStackView, createdAtStackView, UIView()])
     stackView.spacing = 6
     stackView.alignment = .leading
     return stackView
   }()
-  private lazy var postDataAndAuthorStackView: UIStackView = {
-    let stackView = UIStackView(arrangedSubviews: [postDataStackView, UIView(), authorLabel])
-    stackView.spacing = 6
+  private lazy var subredditAndAuthorNameStackView: UIStackView = {
+    let stackView = UIStackView(arrangedSubviews: [subredditLabel, UIView(), authorLabel])
     return stackView
   }()
   private lazy var mainStackView: UIStackView = {
-    let stackView = UIStackView(arrangedSubviews: [titleLabel, subredditLabel, thumbnailImageView, postDataAndAuthorStackView])
+    let stackView = UIStackView(arrangedSubviews: [titleLabel, subredditAndAuthorNameStackView, thumbnailImageView, postDataStackView])
     stackView.axis = .vertical
     stackView.spacing = 12
     stackView.setCustomSpacing(4, after: titleLabel)
     stackView.translatesAutoresizingMaskIntoConstraints = false
     return stackView
   }()
-  private var heightConstraint: NSLayoutConstraint!
+  private var heightConstraint: NSLayoutConstraint?
 
   //MARK: - Init
 
@@ -133,12 +132,14 @@ final class TopRedditsTableViewCell: UITableViewCell {
 
   //MARK: - SetupConstraints
 
-  func setupConstraints(thumbnailHeight: CGFloat?) {
+  func setupConstraints(thumbnailHeight: Int?) {
     if let thumbnailHeight = thumbnailHeight {
-      heightConstraint = thumbnailImageView.heightAnchor.constraint(equalToConstant: thumbnailHeight*1.5)
-      heightConstraint.priority = .defaultLow
+      heightConstraint = thumbnailImageView.heightAnchor.constraint(equalToConstant: CGFloat(thumbnailHeight)*1.5)
+      heightConstraint?.priority = .defaultLow
+      heightConstraint?.isActive = true
     } else {
       thumbnailImageView.isHidden = true
+      titleLabel.numberOfLines = 0
     }
     NSLayoutConstraint.activate([
       mainStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 14),
@@ -150,14 +151,13 @@ final class TopRedditsTableViewCell: UITableViewCell {
       spacerView.trailingAnchor.constraint(equalTo: trailingAnchor),
       spacerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
       spacerView.heightAnchor.constraint(equalToConstant: 12),
-      heightConstraint
     ])
   }
 
   override func prepareForReuse() {
     super.prepareForReuse()
 
+    guard let heightConstraint = heightConstraint else { return }
     thumbnailImageView.removeConstraint(heightConstraint)
   }
 }
-

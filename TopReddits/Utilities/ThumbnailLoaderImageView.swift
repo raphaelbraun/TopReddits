@@ -19,10 +19,7 @@ final class ThumbnailLoaderImageView: UIImageView {
 
     guard let url = URL(string: url), url.absoluteString.contains(".jpg") || url.absoluteString.contains(".png") else { return }
     task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-      guard let data = data, let thumbnail = UIImage(data: data) else {
-        print(error as Any)
-        return
-      }
+      guard let data = data, let thumbnail = UIImage(data: data) else { return }
 
       DispatchQueue.main.async {
         self.image = thumbnail

@@ -13,7 +13,6 @@
 		AB306C522662562F0030428A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB306C512662562F0030428A /* Assets.xcassets */; };
 		AB306C552662562F0030428A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB306C532662562F0030428A /* LaunchScreen.storyboard */; };
 		AB306C60266256300030428A /* TopRedditsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB306C5F266256300030428A /* TopRedditsTests.swift */; };
-		AB306C6B266256300030428A /* TopRedditsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB306C6A266256300030428A /* TopRedditsUITests.swift */; };
 		AB42AF9C2662685A00914191 /* TopRedditsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42AF9B2662685A00914191 /* TopRedditsViewModel.swift */; };
 		AB42AFA42662686900914191 /* TopRedditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42AFA32662686900914191 /* TopRedditsView.swift */; };
 		AB42AFAA2662689A00914191 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42AFA92662689A00914191 /* BaseView.swift */; };
@@ -28,6 +27,9 @@
 		AB58FA052662A3DF003F2D1C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58FA042662A3DF003F2D1C /* Service.swift */; };
 		AB58FA272662CEB6003F2D1C /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58FA262662CEB6003F2D1C /* TableViewDataSource.swift */; };
 		AB58FA2C2662CFAE003F2D1C /* TopRedditsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58FA2B2662CFAE003F2D1C /* TopRedditsCellViewModel.swift */; };
+		AB58FA5126631122003F2D1C /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58FA5026631122003F2D1C /* Int+Extension.swift */; };
+		AB58FA592663114B003F2D1C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58FA582663114B003F2D1C /* Constants.swift */; };
+		AB58FA61266313B9003F2D1C /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58FA60266313B9003F2D1C /* URL+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +61,6 @@
 		AB306C5F266256300030428A /* TopRedditsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRedditsTests.swift; sourceTree = "<group>"; };
 		AB306C61266256300030428A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB306C66266256300030428A /* TopRedditsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TopRedditsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB306C6A266256300030428A /* TopRedditsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRedditsUITests.swift; sourceTree = "<group>"; };
-		AB306C6C266256300030428A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB42AF9B2662685A00914191 /* TopRedditsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRedditsViewModel.swift; sourceTree = "<group>"; };
 		AB42AFA32662686900914191 /* TopRedditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRedditsView.swift; sourceTree = "<group>"; };
 		AB42AFA92662689A00914191 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -75,6 +75,9 @@
 		AB58FA042662A3DF003F2D1C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		AB58FA262662CEB6003F2D1C /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		AB58FA2B2662CFAE003F2D1C /* TopRedditsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRedditsCellViewModel.swift; sourceTree = "<group>"; };
+		AB58FA5026631122003F2D1C /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		AB58FA582663114B003F2D1C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AB58FA60266313B9003F2D1C /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +110,6 @@
 			children = (
 				AB306C472662562E0030428A /* TopReddits */,
 				AB306C5E266256300030428A /* TopRedditsTests */,
-				AB306C69266256300030428A /* TopRedditsUITests */,
 				AB306C462662562E0030428A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,16 +127,11 @@
 		AB306C472662562E0030428A /* TopReddits */ = {
 			isa = PBXGroup;
 			children = (
+				AB42AF9A2662680E00914191 /* List */,
+				AB58FA42266308B9003F2D1C /* Navigation */,
 				AB58F9F92662A3AB003F2D1C /* Networking */,
 				AB42AFA82662688900914191 /* Utilities */,
-				AB42AF9A2662680E00914191 /* List */,
-				AB306C482662562E0030428A /* AppDelegate.swift */,
-				AB306C4A2662562E0030428A /* SceneDelegate.swift */,
-				AB306C512662562F0030428A /* Assets.xcassets */,
-				AB306C532662562F0030428A /* LaunchScreen.storyboard */,
-				AB306C562662562F0030428A /* Info.plist */,
-				AB58F9DE26627A02003F2D1C /* AppCoordinator.swift */,
-				AB58F9F42662A390003F2D1C /* TopRedditsWorker.swift */,
+				AB58FA41266308A5003F2D1C /* SupportingFiles */,
 			);
 			path = TopReddits;
 			sourceTree = "<group>";
@@ -148,19 +145,11 @@
 			path = TopRedditsTests;
 			sourceTree = "<group>";
 		};
-		AB306C69266256300030428A /* TopRedditsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				AB306C6A266256300030428A /* TopRedditsUITests.swift */,
-				AB306C6C266256300030428A /* Info.plist */,
-			);
-			path = TopRedditsUITests;
-			sourceTree = "<group>";
-		};
 		AB42AF9A2662680E00914191 /* List */ = {
 			isa = PBXGroup;
 			children = (
 				AB42AFB72662696C00914191 /* Cell */,
+				AB58F9F42662A390003F2D1C /* TopRedditsWorker.swift */,
 				AB306C4C2662562E0030428A /* TopRedditsViewController.swift */,
 				AB42AF9B2662685A00914191 /* TopRedditsViewModel.swift */,
 				AB42AFA32662686900914191 /* TopRedditsView.swift */,
@@ -172,10 +161,12 @@
 		AB42AFA82662688900914191 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				AB58F9D5266279C9003F2D1C /* Protocols */,
+				AB58FA582663114B003F2D1C /* Constants.swift */,
 				AB42AFA92662689A00914191 /* BaseView.swift */,
-				AB42AFC0266269A800914191 /* ThumbnailLoaderImageView.swift */,
 				AB58FA262662CEB6003F2D1C /* TableViewDataSource.swift */,
+				AB42AFC0266269A800914191 /* ThumbnailLoaderImageView.swift */,
+				AB58FA4F26631119003F2D1C /* Extensions */,
+				AB58F9D5266279C9003F2D1C /* Protocols */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -205,6 +196,35 @@
 				AB58FA042662A3DF003F2D1C /* Service.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		AB58FA41266308A5003F2D1C /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				AB306C512662562F0030428A /* Assets.xcassets */,
+				AB306C532662562F0030428A /* LaunchScreen.storyboard */,
+				AB306C562662562F0030428A /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		AB58FA42266308B9003F2D1C /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				AB306C482662562E0030428A /* AppDelegate.swift */,
+				AB306C4A2662562E0030428A /* SceneDelegate.swift */,
+				AB58F9DE26627A02003F2D1C /* AppCoordinator.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		AB58FA4F26631119003F2D1C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AB58FA5026631122003F2D1C /* Int+Extension.swift */,
+				AB58FA60266313B9003F2D1C /* URL+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,8 +357,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB306C4D2662562E0030428A /* TopRedditsViewController.swift in Sources */,
+				AB58FA592663114B003F2D1C /* Constants.swift in Sources */,
 				AB58F9F52662A390003F2D1C /* TopRedditsWorker.swift in Sources */,
 				AB58FA272662CEB6003F2D1C /* TableViewDataSource.swift in Sources */,
+				AB58FA5126631122003F2D1C /* Int+Extension.swift in Sources */,
 				AB58FA2C2662CFAE003F2D1C /* TopRedditsCellViewModel.swift in Sources */,
 				AB58FA052662A3DF003F2D1C /* Service.swift in Sources */,
 				AB42AFA42662686900914191 /* TopRedditsView.swift in Sources */,
@@ -347,6 +369,7 @@
 				AB42AFC1266269A800914191 /* ThumbnailLoaderImageView.swift in Sources */,
 				AB58FA002662A3C6003F2D1C /* HTTPStatusCode.swift in Sources */,
 				AB306C492662562E0030428A /* AppDelegate.swift in Sources */,
+				AB58FA61266313B9003F2D1C /* URL+Extension.swift in Sources */,
 				AB42AFB92662697D00914191 /* TopRedditsTableViewCell.swift in Sources */,
 				AB42AFAA2662689A00914191 /* BaseView.swift in Sources */,
 				AB42AF9C2662685A00914191 /* TopRedditsViewModel.swift in Sources */,
@@ -368,7 +391,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB306C6B266256300030428A /* TopRedditsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,7 +544,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2J3ZYKV8ND;
-				INFOPLIST_FILE = TopReddits/Info.plist;
+				INFOPLIST_FILE = TopReddits/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -541,7 +563,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2J3ZYKV8ND;
-				INFOPLIST_FILE = TopReddits/Info.plist;
+				INFOPLIST_FILE = TopReddits/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
