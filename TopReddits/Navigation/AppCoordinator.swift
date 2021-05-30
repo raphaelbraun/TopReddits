@@ -19,7 +19,7 @@ class AppCoordinator: Coordinator {
     let viewModel = TopRedditsViewModel(navigationDelegate: self)
     let viewController = TopRedditsViewController(viewModel: viewModel)
 
-    navigationController.pushViewController(viewController, animated: false)
+    navigationController.pushViewController(viewController, animated: true)
   }
 }
 
@@ -30,7 +30,7 @@ extension AppCoordinator: TopRedditsNavigationDelegate {
     let viewModel = TopRedditsDetailViewModel(reddit: reddit, navigationDelegate: self)
     let viewController = TopRedditsDetailViewController(viewModel: viewModel)
 
-    navigationController.pushViewController(viewController, animated: false)
+    navigationController.pushViewController(viewController, animated: true)
   }
 }
 

@@ -56,7 +56,6 @@ enum PostHint: String, Decodable {
 struct Award: Codable {
   let resizedStaticIcons: [ResizedIcon]
   let count: Int
-  let iconFormat: Format?
 }
 
 struct ResizedIcon: Codable {
@@ -66,4 +65,12 @@ struct ResizedIcon: Codable {
 enum Format: String, Codable {
   case apng = "APNG"
   case png = "PNG"
+  case jpg = "JPG"
+  case unknown
+
+  init(from decoder: Decoder) throws {
+    let container = try decoder.singleValueContainer()
+    let string = try container.decode(String.self)
+    self = Format(rawValue: string) ?? .unknown
+  }
 }
