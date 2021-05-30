@@ -24,9 +24,8 @@ class TopRedditsWorker {
 extension TopRedditsWorker: TopRedditsWorkerProtocol {
   public func fetchReddits(after: String?, completion: @escaping (Result<TopReddits, Error>) -> Void) {
     var endpoint = Endpoint(path: Constants.Networking.TopReddits.top)
-    if let after = after {
-      endpoint.queryItems = [URLQueryItem(name: "after", value: after)]
-    }
+    if let after = after { endpoint.queryItems = [URLQueryItem(name: "after", value: after)] }
+
     let decoder = JSONDecoder()
     decoder.keyDecodingStrategy = .convertFromSnakeCase
     decoder.dateDecodingStrategy = .secondsSince1970

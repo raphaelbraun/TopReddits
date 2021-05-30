@@ -18,13 +18,7 @@ struct TopRedditsCellViewModel {
     cell.numCommnetsLabel.text = model.numComments.roundedWithAbbreviations
     cell.upsLabel.text = model.ups.roundedWithAbbreviations
     cell.setupConstraints(thumbnailHeight: model.thumbnailHeight)
-    if model.thumbnail == Constants.DefaultThumbnails.nsfw {
-      cell.thumbnailImageView.image = UIImage(systemName: "eye.slash")
-    } else if model.thumbnail == Constants.DefaultThumbnails.default {
-      cell.thumbnailImageView.image = UIImage(systemName: "link")
-    } else {
-      cell.thumbnailImageView.loadThumbnail(from: model.thumbnail)
-    }
+    cell.thumbnailImageView.loadThumbnail(from: model.thumbnail)
   }
 
   func formatDate(_ createdUtc: Date) -> String {
