@@ -16,7 +16,7 @@
 		AB42AFA42662686900914191 /* TopRedditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42AFA32662686900914191 /* TopRedditsView.swift */; };
 		AB42AFAA2662689A00914191 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42AFA92662689A00914191 /* BaseView.swift */; };
 		AB42AFB92662697D00914191 /* TopRedditsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42AFB82662697D00914191 /* TopRedditsTableViewCell.swift */; };
-		AB42AFC1266269A800914191 /* ThumbnailLoaderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42AFC0266269A800914191 /* ThumbnailLoaderImageView.swift */; };
+		AB42AFC1266269A800914191 /* LoaderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42AFC0266269A800914191 /* LoaderImageView.swift */; };
 		AB58F9D7266279D9003F2D1C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58F9D6266279D9003F2D1C /* Coordinator.swift */; };
 		AB58F9DF26627A02003F2D1C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58F9DE26627A02003F2D1C /* AppCoordinator.swift */; };
 		AB58F9F02662A317003F2D1C /* TopRedditsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58F9EF2662A317003F2D1C /* TopRedditsModels.swift */; };
@@ -34,6 +34,12 @@
 		AB6D66C42663A95C00BD6DDB /* JsonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6D66C32663A95C00BD6DDB /* JsonLoader.swift */; };
 		AB6D66C82663AD6C00BD6DDB /* TopRedditsWorkerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6D66C72663AD6C00BD6DDB /* TopRedditsWorkerMock.swift */; };
 		AB6D66D12663B2D200BD6DDB /* TopRedditsCellViewModelModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6D66D02663B2D200BD6DDB /* TopRedditsCellViewModelModelTests.swift */; };
+		AB6D66DD2663C03800BD6DDB /* TopRedditsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6D66DC2663C03800BD6DDB /* TopRedditsDetailView.swift */; };
+		AB6D66E32663C06B00BD6DDB /* TopRedditsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6D66E22663C06B00BD6DDB /* TopRedditsDetailViewModel.swift */; };
+		AB6D66E72663C07600BD6DDB /* TopRedditsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6D66E62663C07600BD6DDB /* TopRedditsDetailViewController.swift */; };
+		AB6D66EF26640AD600BD6DDB /* PostDataStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6D66EE26640AD600BD6DDB /* PostDataStackView.swift */; };
+		AB6D66F72664109400BD6DDB /* AwardStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6D66F62664109400BD6DDB /* AwardStackView.swift */; };
+		ABA9DDF4266426AD00EB5AB4 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA9DDF3266426AD00EB5AB4 /* Array+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +66,7 @@
 		AB42AFA32662686900914191 /* TopRedditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRedditsView.swift; sourceTree = "<group>"; };
 		AB42AFA92662689A00914191 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		AB42AFB82662697D00914191 /* TopRedditsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRedditsTableViewCell.swift; sourceTree = "<group>"; };
-		AB42AFC0266269A800914191 /* ThumbnailLoaderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailLoaderImageView.swift; sourceTree = "<group>"; };
+		AB42AFC0266269A800914191 /* LoaderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderImageView.swift; sourceTree = "<group>"; };
 		AB58F9D6266279D9003F2D1C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		AB58F9DE26627A02003F2D1C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		AB58F9EF2662A317003F2D1C /* TopRedditsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRedditsModels.swift; sourceTree = "<group>"; };
@@ -78,6 +84,12 @@
 		AB6D66C32663A95C00BD6DDB /* JsonLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonLoader.swift; sourceTree = "<group>"; };
 		AB6D66C72663AD6C00BD6DDB /* TopRedditsWorkerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRedditsWorkerMock.swift; sourceTree = "<group>"; };
 		AB6D66D02663B2D200BD6DDB /* TopRedditsCellViewModelModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRedditsCellViewModelModelTests.swift; sourceTree = "<group>"; };
+		AB6D66DC2663C03800BD6DDB /* TopRedditsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRedditsDetailView.swift; sourceTree = "<group>"; };
+		AB6D66E22663C06B00BD6DDB /* TopRedditsDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRedditsDetailViewModel.swift; sourceTree = "<group>"; };
+		AB6D66E62663C07600BD6DDB /* TopRedditsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRedditsDetailViewController.swift; sourceTree = "<group>"; };
+		AB6D66EE26640AD600BD6DDB /* PostDataStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataStackView.swift; sourceTree = "<group>"; };
+		AB6D66F62664109400BD6DDB /* AwardStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardStackView.swift; sourceTree = "<group>"; };
+		ABA9DDF3266426AD00EB5AB4 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +160,7 @@
 				AB42AF9B2662685A00914191 /* TopRedditsViewModel.swift */,
 				AB58F9F42662A390003F2D1C /* TopRedditsWorker.swift */,
 				AB42AFB72662696C00914191 /* Cell */,
+				AB6D66DB2663C02600BD6DDB /* Detail */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -155,12 +168,11 @@
 		AB42AFA82662688900914191 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				AB42AFA92662689A00914191 /* BaseView.swift */,
 				AB58FA582663114B003F2D1C /* Constants.swift */,
 				AB58FA262662CEB6003F2D1C /* TableViewDataSource.swift */,
-				AB42AFC0266269A800914191 /* ThumbnailLoaderImageView.swift */,
 				AB58FA4F26631119003F2D1C /* Extensions */,
 				AB58F9D5266279C9003F2D1C /* Protocols */,
+				AB57BD6526643B440043E959 /* Views */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -168,10 +180,21 @@
 		AB42AFB72662696C00914191 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				AB42AFB82662697D00914191 /* TopRedditsTableViewCell.swift */,
 				AB58FA2B2662CFAE003F2D1C /* TopRedditsCellViewModel.swift */,
+				AB42AFB82662697D00914191 /* TopRedditsTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		AB57BD6526643B440043E959 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AB6D66F62664109400BD6DDB /* AwardStackView.swift */,
+				AB42AFA92662689A00914191 /* BaseView.swift */,
+				AB42AFC0266269A800914191 /* LoaderImageView.swift */,
+				AB6D66EE26640AD600BD6DDB /* PostDataStackView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		AB58F9D5266279C9003F2D1C /* Protocols */ = {
@@ -215,6 +238,7 @@
 		AB58FA4F26631119003F2D1C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				ABA9DDF3266426AD00EB5AB4 /* Array+Extension.swift */,
 				AB58FA5026631122003F2D1C /* Int+Extension.swift */,
 				AB58FA60266313B9003F2D1C /* URL+Extension.swift */,
 			);
@@ -237,6 +261,16 @@
 				AB6D66D02663B2D200BD6DDB /* TopRedditsCellViewModelModelTests.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		AB6D66DB2663C02600BD6DDB /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				AB6D66DC2663C03800BD6DDB /* TopRedditsDetailView.swift */,
+				AB6D66E62663C07600BD6DDB /* TopRedditsDetailViewController.swift */,
+				AB6D66E22663C06B00BD6DDB /* TopRedditsDetailViewModel.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,16 +376,22 @@
 				AB306C4D2662562E0030428A /* TopRedditsViewController.swift in Sources */,
 				AB58FA592663114B003F2D1C /* Constants.swift in Sources */,
 				AB58F9F52662A390003F2D1C /* TopRedditsWorker.swift in Sources */,
+				AB6D66EF26640AD600BD6DDB /* PostDataStackView.swift in Sources */,
+				AB6D66E32663C06B00BD6DDB /* TopRedditsDetailViewModel.swift in Sources */,
 				AB58FA272662CEB6003F2D1C /* TableViewDataSource.swift in Sources */,
 				AB58FA5126631122003F2D1C /* Int+Extension.swift in Sources */,
+				AB6D66F72664109400BD6DDB /* AwardStackView.swift in Sources */,
 				AB58FA2C2662CFAE003F2D1C /* TopRedditsCellViewModel.swift in Sources */,
 				AB58FA052662A3DF003F2D1C /* Service.swift in Sources */,
 				AB42AFA42662686900914191 /* TopRedditsView.swift in Sources */,
+				ABA9DDF4266426AD00EB5AB4 /* Array+Extension.swift in Sources */,
 				AB58F9FB2662A3B4003F2D1C /* Endpoint.swift in Sources */,
+				AB6D66E72663C07600BD6DDB /* TopRedditsDetailViewController.swift in Sources */,
 				AB58F9DF26627A02003F2D1C /* AppCoordinator.swift in Sources */,
-				AB42AFC1266269A800914191 /* ThumbnailLoaderImageView.swift in Sources */,
+				AB42AFC1266269A800914191 /* LoaderImageView.swift in Sources */,
 				AB58FA002662A3C6003F2D1C /* HTTPStatusCode.swift in Sources */,
 				AB306C492662562E0030428A /* AppDelegate.swift in Sources */,
+				AB6D66DD2663C03800BD6DDB /* TopRedditsDetailView.swift in Sources */,
 				AB58FA61266313B9003F2D1C /* URL+Extension.swift in Sources */,
 				AB42AFB92662697D00914191 /* TopRedditsTableViewCell.swift in Sources */,
 				AB42AFAA2662689A00914191 /* BaseView.swift in Sources */,
