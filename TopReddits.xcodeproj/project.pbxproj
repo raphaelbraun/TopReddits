@@ -12,7 +12,6 @@
 		AB306C4D2662562E0030428A /* TopRedditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB306C4C2662562E0030428A /* TopRedditsViewController.swift */; };
 		AB306C522662562F0030428A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB306C512662562F0030428A /* Assets.xcassets */; };
 		AB306C552662562F0030428A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB306C532662562F0030428A /* LaunchScreen.storyboard */; };
-		AB306C60266256300030428A /* TopRedditsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB306C5F266256300030428A /* TopRedditsTests.swift */; };
 		AB42AF9C2662685A00914191 /* TopRedditsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42AF9B2662685A00914191 /* TopRedditsViewModel.swift */; };
 		AB42AFA42662686900914191 /* TopRedditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42AFA32662686900914191 /* TopRedditsView.swift */; };
 		AB42AFAA2662689A00914191 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42AFA92662689A00914191 /* BaseView.swift */; };
@@ -30,17 +29,15 @@
 		AB58FA5126631122003F2D1C /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58FA5026631122003F2D1C /* Int+Extension.swift */; };
 		AB58FA592663114B003F2D1C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58FA582663114B003F2D1C /* Constants.swift */; };
 		AB58FA61266313B9003F2D1C /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58FA60266313B9003F2D1C /* URL+Extension.swift */; };
+		AB6D66B22663A6D400BD6DDB /* TopRedditsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6D66B12663A6D400BD6DDB /* TopRedditsViewModelTests.swift */; };
+		AB6D66BC2663A8EC00BD6DDB /* top.json in Resources */ = {isa = PBXBuildFile; fileRef = AB6D66BB2663A8EC00BD6DDB /* top.json */; };
+		AB6D66C42663A95C00BD6DDB /* JsonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6D66C32663A95C00BD6DDB /* JsonLoader.swift */; };
+		AB6D66C82663AD6C00BD6DDB /* TopRedditsWorkerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6D66C72663AD6C00BD6DDB /* TopRedditsWorkerMock.swift */; };
+		AB6D66D12663B2D200BD6DDB /* TopRedditsCellViewModelModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6D66D02663B2D200BD6DDB /* TopRedditsCellViewModelModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		AB306C5C266256300030428A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AB306C3D2662562D0030428A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AB306C442662562D0030428A;
-			remoteInfo = TopReddits;
-		};
-		AB306C67266256300030428A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AB306C3D2662562D0030428A /* Project object */;
 			proxyType = 1;
@@ -58,9 +55,7 @@
 		AB306C542662562F0030428A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB306C562662562F0030428A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB306C5B266256300030428A /* TopRedditsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TopRedditsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB306C5F266256300030428A /* TopRedditsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRedditsTests.swift; sourceTree = "<group>"; };
 		AB306C61266256300030428A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB306C66266256300030428A /* TopRedditsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TopRedditsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB42AF9B2662685A00914191 /* TopRedditsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRedditsViewModel.swift; sourceTree = "<group>"; };
 		AB42AFA32662686900914191 /* TopRedditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRedditsView.swift; sourceTree = "<group>"; };
 		AB42AFA92662689A00914191 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -78,6 +73,11 @@
 		AB58FA5026631122003F2D1C /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		AB58FA582663114B003F2D1C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AB58FA60266313B9003F2D1C /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		AB6D66B12663A6D400BD6DDB /* TopRedditsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRedditsViewModelTests.swift; sourceTree = "<group>"; };
+		AB6D66BB2663A8EC00BD6DDB /* top.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = top.json; sourceTree = "<group>"; };
+		AB6D66C32663A95C00BD6DDB /* JsonLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonLoader.swift; sourceTree = "<group>"; };
+		AB6D66C72663AD6C00BD6DDB /* TopRedditsWorkerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRedditsWorkerMock.swift; sourceTree = "<group>"; };
+		AB6D66D02663B2D200BD6DDB /* TopRedditsCellViewModelModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRedditsCellViewModelModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,13 +89,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		AB306C58266256300030428A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AB306C63266256300030428A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -119,7 +112,6 @@
 			children = (
 				AB306C452662562E0030428A /* TopReddits.app */,
 				AB306C5B266256300030428A /* TopRedditsTests.xctest */,
-				AB306C66266256300030428A /* TopRedditsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,8 +131,10 @@
 		AB306C5E266256300030428A /* TopRedditsTests */ = {
 			isa = PBXGroup;
 			children = (
-				AB306C5F266256300030428A /* TopRedditsTests.swift */,
+				AB6D66BB2663A8EC00BD6DDB /* top.json */,
 				AB306C61266256300030428A /* Info.plist */,
+				AB6D66B02663A6C400BD6DDB /* List */,
+				AB6D66C32663A95C00BD6DDB /* JsonLoader.swift */,
 			);
 			path = TopRedditsTests;
 			sourceTree = "<group>";
@@ -227,6 +221,24 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		AB6D66B02663A6C400BD6DDB /* List */ = {
+			isa = PBXGroup;
+			children = (
+				AB6D66CF2663B2BF00BD6DDB /* Cell */,
+				AB6D66B12663A6D400BD6DDB /* TopRedditsViewModelTests.swift */,
+				AB6D66C72663AD6C00BD6DDB /* TopRedditsWorkerMock.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		AB6D66CF2663B2BF00BD6DDB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AB6D66D02663B2D200BD6DDB /* TopRedditsCellViewModelModelTests.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -265,24 +277,6 @@
 			productReference = AB306C5B266256300030428A /* TopRedditsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		AB306C65266256300030428A /* TopRedditsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AB306C75266256300030428A /* Build configuration list for PBXNativeTarget "TopRedditsUITests" */;
-			buildPhases = (
-				AB306C62266256300030428A /* Sources */,
-				AB306C63266256300030428A /* Frameworks */,
-				AB306C64266256300030428A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AB306C68266256300030428A /* PBXTargetDependency */,
-			);
-			name = TopRedditsUITests;
-			productName = TopRedditsUITests;
-			productReference = AB306C66266256300030428A /* TopRedditsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -296,10 +290,6 @@
 						CreatedOnToolsVersion = 12.2;
 					};
 					AB306C5A266256300030428A = {
-						CreatedOnToolsVersion = 12.2;
-						TestTargetID = AB306C442662562D0030428A;
-					};
-					AB306C65266256300030428A = {
 						CreatedOnToolsVersion = 12.2;
 						TestTargetID = AB306C442662562D0030428A;
 					};
@@ -320,7 +310,6 @@
 			targets = (
 				AB306C442662562D0030428A /* TopReddits */,
 				AB306C5A266256300030428A /* TopRedditsTests */,
-				AB306C65266256300030428A /* TopRedditsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -339,13 +328,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AB306C64266256300030428A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				AB6D66BC2663A8EC00BD6DDB /* top.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,14 +366,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB306C60266256300030428A /* TopRedditsTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AB306C62266256300030428A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				AB6D66D12663B2D200BD6DDB /* TopRedditsCellViewModelModelTests.swift in Sources */,
+				AB6D66C42663A95C00BD6DDB /* JsonLoader.swift in Sources */,
+				AB6D66C82663AD6C00BD6DDB /* TopRedditsWorkerMock.swift in Sources */,
+				AB6D66B22663A6D400BD6DDB /* TopRedditsViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,11 +380,6 @@
 			isa = PBXTargetDependency;
 			target = AB306C442662562D0030428A /* TopReddits */;
 			targetProxy = AB306C5C266256300030428A /* PBXContainerItemProxy */;
-		};
-		AB306C68266256300030428A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AB306C442662562D0030428A /* TopReddits */;
-			targetProxy = AB306C67266256300030428A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -619,46 +593,6 @@
 			};
 			name = Release;
 		};
-		AB306C76266256300030428A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2J3ZYKV8ND;
-				INFOPLIST_FILE = TopRedditsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = braun.TopRedditsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TopReddits;
-			};
-			name = Debug;
-		};
-		AB306C77266256300030428A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2J3ZYKV8ND;
-				INFOPLIST_FILE = TopRedditsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = braun.TopRedditsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TopReddits;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -685,15 +619,6 @@
 			buildConfigurations = (
 				AB306C73266256300030428A /* Debug */,
 				AB306C74266256300030428A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AB306C75266256300030428A /* Build configuration list for PBXNativeTarget "TopRedditsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AB306C76266256300030428A /* Debug */,
-				AB306C77266256300030428A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

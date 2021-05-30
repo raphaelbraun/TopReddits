@@ -23,16 +23,15 @@ protocol TopRedditsViewModelProtocol: AnyObject {
 }
 
 class TopRedditsViewModel {
+  var tableDataSource: TableViewDataSource<TopRedditsCellViewModel> = .make(for: [])
+  private weak var navigationDelegate: TopRedditsNavigationDelegate?
   private var service: TopRedditsWorkerProtocol
+  let navigationTitle: String
   var reloadData: (() -> Void)?
   var error: ((Error) -> Void)?
   var after = ""
   var shouldLoadMore: Bool = true
   var isLoading = false
-
-  private weak var navigationDelegate: TopRedditsNavigationDelegate?
-  var tableDataSource: TableViewDataSource<TopRedditsCellViewModel> = .make(for: [])
-  let navigationTitle: String
 
   init(service: TopRedditsWorkerProtocol = TopRedditsWorker(),
        navigationDelegate: TopRedditsNavigationDelegate? = nil) {
