@@ -148,12 +148,12 @@
 		AB42AF9A2662680E00914191 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				AB42AFB72662696C00914191 /* Cell */,
-				AB58F9F42662A390003F2D1C /* TopRedditsWorker.swift */,
+				AB58F9EF2662A317003F2D1C /* TopRedditsModels.swift */,
+				AB42AFA32662686900914191 /* TopRedditsView.swift */,
 				AB306C4C2662562E0030428A /* TopRedditsViewController.swift */,
 				AB42AF9B2662685A00914191 /* TopRedditsViewModel.swift */,
-				AB42AFA32662686900914191 /* TopRedditsView.swift */,
-				AB58F9EF2662A317003F2D1C /* TopRedditsModels.swift */,
+				AB58F9F42662A390003F2D1C /* TopRedditsWorker.swift */,
+				AB42AFB72662696C00914191 /* Cell */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -161,8 +161,8 @@
 		AB42AFA82662688900914191 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				AB58FA582663114B003F2D1C /* Constants.swift */,
 				AB42AFA92662689A00914191 /* BaseView.swift */,
+				AB58FA582663114B003F2D1C /* Constants.swift */,
 				AB58FA262662CEB6003F2D1C /* TableViewDataSource.swift */,
 				AB42AFC0266269A800914191 /* ThumbnailLoaderImageView.swift */,
 				AB58FA4F26631119003F2D1C /* Extensions */,
@@ -201,9 +201,9 @@
 		AB58FA41266308A5003F2D1C /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				AB306C562662562F0030428A /* Info.plist */,
 				AB306C512662562F0030428A /* Assets.xcassets */,
 				AB306C532662562F0030428A /* LaunchScreen.storyboard */,
-				AB306C562662562F0030428A /* Info.plist */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -211,9 +211,9 @@
 		AB58FA42266308B9003F2D1C /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				AB58F9DE26627A02003F2D1C /* AppCoordinator.swift */,
 				AB306C482662562E0030428A /* AppDelegate.swift */,
 				AB306C4A2662562E0030428A /* SceneDelegate.swift */,
-				AB58F9DE26627A02003F2D1C /* AppCoordinator.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";

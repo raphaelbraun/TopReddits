@@ -109,7 +109,7 @@ final class TopRedditsTableViewCell: UITableViewCell {
     stackView.translatesAutoresizingMaskIntoConstraints = false
     return stackView
   }()
-  private var heightConstraint: NSLayoutConstraint?
+  private weak var heightConstraint: NSLayoutConstraint?
 
   //MARK: - Init
 
